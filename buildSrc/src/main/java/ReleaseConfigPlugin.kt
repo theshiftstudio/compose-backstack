@@ -89,6 +89,7 @@ class ReleaseConfigPlugin : Plugin<Project> {
         }
 
         target.configure<SigningExtension> {
+          isRequired = isRelease
           sign(publications["release"])
         }
       }
